@@ -16,7 +16,7 @@ public class Person implements Persons {
 
 	public void showPhoneNos() {
 		for (Entry<String, String> entry : phoneNos.entrySet()) {
-			System.out.println(entry.getKey() + "-->" + entry.getValue());
+			System.out.println(entry.getKey() + " -- " + entry.getValue());
 		}
 
 	}

@@ -13,7 +13,7 @@ public class BadChild implements Child {
 	}
 
 	public void study() {
-		System.out.println("I don't go to school");
+		System.out.println("I don't go to school.");
 
 	}
 
@@ -28,7 +28,7 @@ public class BadChild implements Child {
 
 	public String doHobby() {
 		setHobby(hobby);
-		return "I like " + hobby + ".";
+		return hobby;
 	}
 
 	@Override

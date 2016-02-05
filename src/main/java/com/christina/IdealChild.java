@@ -28,7 +28,7 @@ public class IdealChild implements Child {
 
 	public String doHobby() {
 		setHobby(hobby);
-		return "I like " + hobby;
+		return hobby;
 	}
 	
 	@Override
