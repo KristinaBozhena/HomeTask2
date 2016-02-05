@@ -1,17 +1,15 @@
 package com.christina;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 public class Person implements Persons {
-	private int id;
+	private String hobby;
 	private String name;
 	private Map<String, String> phoneNos;
 
-	public Person(int id, String name, Map<String, String> phoneNos) {
+	public Person(String name, Map<String, String> phoneNos) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.phoneNos = phoneNos;
 	}
@@ -24,10 +22,15 @@ public class Person implements Persons {
 	}
 
 	public void setHobby(String hobby) {
-
+		this.hobby = hobby;
 	}
 
 	public String doHobby() {
 		return null;
+	}
+
+	@Override
+	public String toString() {
+		return "Person: name - " + name + ". ";
 	}
 }

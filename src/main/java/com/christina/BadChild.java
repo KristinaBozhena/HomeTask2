@@ -4,9 +4,9 @@ public class BadChild implements Child {
 
 	public String hobby;
 	private String name;
-	private int phone;
+	private String phone;
 
-	public BadChild(String name, int phone) {
+	public BadChild(String name, String phone) {
 		super();
 		this.name = name;
 		this.phone = phone;
@@ -28,7 +28,12 @@ public class BadChild implements Child {
 
 	public String doHobby() {
 		setHobby(hobby);
-		return "I like " + hobby;
+		return "I like " + hobby + ".";
+	}
+
+	@Override
+	public String toString() {
+		return "BadChild: name - " + name + ", phone - " + phone + ". " + doHobby();
 	}
 
 }

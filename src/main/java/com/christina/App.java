@@ -3,22 +3,19 @@ package com.christina;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
 public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
-		Child idChild = (IdealChild) context.getBean("idealchild");
+		Child idChild = (Child) context.getBean("idealchild");
+		System.out.println(idChild);
 		idChild.study();
-		idChild.doHobby();
-		
+
 		Child bChild = (Child) context.getBean("badchild");
+		System.out.println(bChild);
 		bChild.study();
-		bChild.doHobby();
-		
+
 		Person person = (Person) context.getBean("person");
+		System.out.println(person);
 		person.showPhoneNos();
 
 	}
