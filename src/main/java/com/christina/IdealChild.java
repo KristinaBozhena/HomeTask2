@@ -5,12 +5,12 @@ import java.util.Map;
 public class IdealChild implements Child {
 	public String hobby;
 	private String name;
-	private Map<String, String> phoneNos;
+	private int phone;
 
-	public IdealChild(String name, Map<String, String> phoneNos) {
+	public IdealChild(String name, int phone) {
 		super();
 		this.name = name;
-		this.phoneNos = phoneNos;
+		this.phone = phone;
 	}
 
 	public void study() {

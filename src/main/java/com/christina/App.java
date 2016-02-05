@@ -10,9 +10,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
-		Child child = (Child) context.getBean("idealchild");
-		child.study();
-		child.doHobby();
+		Child idChild = (IdealChild) context.getBean("idealchild");
+		idChild.study();
+		idChild.doHobby();
+		
+		Child bChild = (Child) context.getBean("badchild");
+		bChild.study();
+		bChild.doHobby();
+		
 		Person person = (Person) context.getBean("person");
 		person.showPhoneNos();
 

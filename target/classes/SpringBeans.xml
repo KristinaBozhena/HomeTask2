@@ -4,16 +4,20 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="idealchild" class="com.christina.IdealChild">
+		<constructor-arg value="Viki" />
+		<constructor-arg value="0666666666" type="int" />
 		<property name="hobby" value="read books." />
 	</bean>
 
-	<bean id="bad" class="com.christina.BadChild">
+	<bean id="badchild" class="com.christina.BadChild">
+		<constructor-arg value="Ken" />
+		<constructor-arg value="0999999999" type="int" />
 		<property name="hobby" value="break the windows." />
 	</bean>
-	
+
 	<bean id="person" class="com.christina.Person">
 		<constructor-arg value="1" type="int" />
-		<constructor-arg value="Raj" />
+		<constructor-arg value="Peter" />
 		<constructor-arg>
 			<map>
 				<entry key="mobile" value="9999967891" />
