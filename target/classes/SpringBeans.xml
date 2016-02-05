@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-	
+
 	<bean id="idealchild" class="com.christina.IdealChild">
 		<property name="hobby" value="read books." />
 	</bean>
@@ -10,5 +10,15 @@
 	<bean id="bad" class="com.christina.BadChild">
 		<property name="hobby" value="break the windows." />
 	</bean>
-
+	
+	<bean id="person" class="com.christina.Person">
+		<constructor-arg value="1" type="int" />
+		<constructor-arg value="Raj" />
+		<constructor-arg>
+			<map>
+				<entry key="mobile" value="9999967891" />
+				<entry key="landline" value="080789345" />
+			</map>
+		</constructor-arg>
+	</bean>
 </beans>

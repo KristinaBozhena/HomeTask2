@@ -13,5 +13,8 @@ public class App {
 		Child child = (Child) context.getBean("idealchild");
 		child.study();
 		child.doHobby();
+		Person person = (Person) context.getBean("person");
+		person.showPhoneNos();
+
 	}
 }
