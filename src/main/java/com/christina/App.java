@@ -1,22 +1,25 @@
 package com.christina;
 
+import java.sql.Date;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
-		Child idChild = (Child) context.getBean("idealchild");
-		System.out.println(idChild);
-		idChild.study();
-
-		Child bChild = (Child) context.getBean("badchild");
-		System.out.println(bChild);
-		bChild.study();
-
-		Person person = (Person) context.getBean("person");
-		System.out.println(person);
-		person.showPhoneNos();
+		WorkWithStudents worker = (WorkWithStudents) context.getBean("worker");
+		// new WorkWithStudents();
+		Student testStudent = new Student("Vlad Valt", 5);
+		worker.saveStudentToDb(testStudent);
+		WorkWithTeacher workWithTeacher = (WorkWithTeacher) context.getBean("teachersWorker");
+		Teacher teacher = new Teacher();
+		teacher.setFirstname("Andrii");
+		teacher.setLastname("Glybovets");
+		teacher.setCellphone("+380675097865");
+		teacher = workWithTeacher.addTeacher(teacher);
+		//teacher.setBirthDate(new Date());
+		workWithTeacher.saveTacher(teacher);
 
 	}
 }
