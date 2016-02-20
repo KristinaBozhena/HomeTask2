@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+<<<<<<< Updated upstream
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
@@ -19,6 +20,17 @@
 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
 		<constructor-arg ref="dataSource" />
+=======
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	<context:annotation-config />
+	
+	<bean id="idealchild" class="com.christina.IdealChild">
+		<constructor-arg value="Viki" />
+		<constructor-arg value="0666666666" />
+		<property name="hobby" value="I like read books." />
+>>>>>>> Stashed changes
 	</bean>
 
 	<bean id="worker" class="com.christina.WorkWithStudents" />
@@ -36,6 +48,7 @@
 		</property>
 	</bean>
 
+<<<<<<< Updated upstream
 	<bean
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
@@ -44,6 +57,17 @@
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
+=======
+	<bean id="person" class="com.christina.Person" autowire="constructor">
+		<constructor-arg value="Peter" />
+		<constructor-arg>
+			<map>
+				<entry key="mobile" value="9999967891" />
+				<entry key="landline" value="080789345" />
+			</map>
+		</constructor-arg>
+		<property name="hobby" value="I like watch TV." />
+>>>>>>> Stashed changes
 	</bean>
 	<tx:annotation-driven/>
 
